@@ -1,0 +1,48 @@
+{
+  "name": "chameleon",
+  "version": "0.0.0",
+  "description": "beautiful editor",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron ./src/main.js",
+    "dist": "build --win --x64",
+    "rebuild": "electron-rebuild",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "wangpin:wangpin34/chameleon"
+  },
+  "author": "wangpin",
+  "license": "Apache 2.0",
+  "build": {
+    "appId": "wp.chameleon",
+    "copyright": "copyright@2016-2017 wp",
+    "productName": "clameleon editor",
+    "files": [
+      "**"
+    ],
+    "win": {
+      "target": "squirrel",
+      "icon": "src/icon.ico"
+    },
+    "directories": {
+      "buildResources": "src",
+      "output": "build/release",
+      "app": "src"
+    },
+    "squirrelWindows": {
+      "iconUrl": ""
+    }
+  },
+  "devDependencies": {
+    "electron": "^1.4.13",
+    "electron-build": "0.0.3",
+    "electron-builder": "^10.9.3",
+    "electron-prebuilt": "^1.4.13",
+    "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  }
+}
