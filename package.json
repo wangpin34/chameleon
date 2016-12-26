@@ -1,6 +1,6 @@
 {
   "name": "chameleon",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "beautiful editor",
   "main": "src/main.js",
   "scripts": {
@@ -57,8 +57,5 @@
     "electron-prebuilt": "^1.4.13",
     "gulp": "^3.9.1"
   },
-  "dependencies": {
-    "electron-auto-updater": "^0.8.3",
-    "electron-squirrel-startup": "^1.0.0"
-  }
+  "dependencies": {}
 }

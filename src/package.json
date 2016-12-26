@@ -1,7 +1,7 @@
 {
   "name": "chameleon",
   "description": "beautiful editor",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "main.js",
   "author": "wangpin",
   "dependencies": {
