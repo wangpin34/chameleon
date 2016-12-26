@@ -3,7 +3,7 @@ const {app, BrowserWindow} = require('electron')
 const {start} = require('./updater')
 
 if (require('electron-squirrel-startup')) {	
-	return
+	app.quit()
 }
 
 // //this should be placed at top of main.js to handle setup events quickly
@@ -95,6 +95,11 @@ app.on('ready', () => {
 	win.on('closed', () => {
 	  win = null
 	})
+
+	if(process.env.NODE_ENV !== 'development'){
+		console.log('start updater')
+		start()
+	}
 })
 
 app.on('window-all-closed', () => {
