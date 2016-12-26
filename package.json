@@ -1,29 +1,33 @@
 {
   "name": "chameleon",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "beautiful editor",
   "main": "src/main.js",
   "scripts": {
     "start": "electron ./src/main.js",
     "dist": "build --win --x64",
+    "prelease": "build --prerelease",
     "rebuild": "electron-rebuild",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "wangpin:wangpin34/chameleon"
+    "url": "git+https://github.com/wangpin34/chameleon.git"
   },
   "author": "wangpin",
   "license": "Apache 2.0",
   "build": {
     "appId": "wp.chameleon",
     "copyright": "copyright@2016-2017 wp",
-    "productName": "clameleon editor",
+    "productName": "chameleon",
     "files": [
       "**"
     ],
+    "publish": {
+      "provider": "github"
+    },
     "win": {
-      "target": "squirrel",
+      "target": "nsis",
       "icon": "src/icon.ico"
     },
     "directories": {
@@ -31,18 +35,27 @@
       "output": "build/release",
       "app": "src"
     },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "runAfterFinish": false,
+      "installerIcon": "src/icon.ico",
+      "warningsAsErrors": false
+    },
     "squirrelWindows": {
-      "iconUrl": ""
+      "iconUrl": "https://github.com/wangpin34/chameleon/blob/master/src/icon.ico?raw=true",
+      "msi": true,
+      "remoteReleases": true
     }
   },
   "devDependencies": {
     "electron": "^1.4.13",
-    "electron-build": "0.0.3",
     "electron-builder": "^10.9.3",
     "electron-prebuilt": "^1.4.13",
     "gulp": "^3.9.1"
   },
   "dependencies": {
+    "electron-auto-updater": "^0.8.3",
     "electron-squirrel-startup": "^1.0.0"
   }
 }

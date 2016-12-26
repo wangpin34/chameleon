@@ -1,10 +1,11 @@
 {
-	"name": "chameleon",
-	"description": "beautiful editor",
-	"version": "0.0.0",
-	"main": "main.js",
-	"author": "wangpin",
+  "name": "chameleon",
+  "description": "beautiful editor",
+  "version": "0.0.1",
+  "main": "main.js",
+  "author": "wangpin",
   "dependencies": {
-		"electron-squirrel-startup": "^1.0.0"
+    "electron-auto-updater": "^0.8.3",
+    "electron-squirrel-startup": "^1.0.0"
   }
 }
