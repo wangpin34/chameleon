@@ -1,6 +1,6 @@
 {
   "name": "chameleon",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "beautiful editor",
   "main": "src/main.js",
   "scripts": {
