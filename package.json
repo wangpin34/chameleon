@@ -1,15 +1,13 @@
 {
   "name": "chameleon",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "beautiful editor",
   "main": "src/main.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development electron ./src/main.js",
-    "dist": "build --win --x64",
-    "prelease": "build --prerelease",
+    "release": "build --publish onTagOrDraft --prerelease --win --x64",
     "rebuild": "electron-rebuild",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "build --publish onTagOrDraft --win --x64 --prerelease"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
