@@ -2,13 +2,11 @@
 const {app, BrowserWindow} = require('electron')
 const {start} = require('./updater')
 
-if (require('electron-squirrel-startup')) {
-	//app.quit()
-	start()	
+if (require('electron-squirrel-startup')) {	
 	return
 }
 
-// this should be placed at top of main.js to handle setup events quickly
+// //this should be placed at top of main.js to handle setup events quickly
 // if (handleSquirrelEvent()) {
 //   // squirrel event handled and app will exit in 1000ms, so don't do anything else
 //   return;
