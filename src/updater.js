@@ -1,10 +1,8 @@
 const { autoUpdater } = require('electron-auto-updater')
 
-
-const target = 'onshape-download.develar.org'
-
 const start = () => {
-	autoUpdater.setFeedURL()
+	//Do not call setFeedURL on Windows. electron-builder automatically creates app-update.yml file for you on build in the resources
+	//autoUpdater.setFeedURL(target)
 
 	autoUpdater.checkForUpdates().then((result) => {
 		console.log('check for update result: ' + result) 

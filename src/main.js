@@ -97,6 +97,7 @@ app.on('ready', () => {
 	  win = null
 	})
 
+	start()
 })
 
 app.on('window-all-closed', () => {

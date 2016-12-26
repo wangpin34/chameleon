@@ -8,7 +8,8 @@
     "dist": "build --win --x64",
     "prelease": "build --prerelease",
     "rebuild": "electron-rebuild",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "build --publish onTagOrDraft"
   },
   "repository": {
     "type": "git",
@@ -24,10 +25,12 @@
       "**"
     ],
     "publish": {
-      "provider": "github"
+      "provider": "github",
+      "owner": "wangpin",
+      "repo": "chameleon"
     },
     "win": {
-      "target": "nsis",
+      "target": "squirrel",
       "icon": "src/icon.ico"
     },
     "directories": {
